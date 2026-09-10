@@ -1,0 +1,26 @@
+models:
+  - name: stg_nations
+    columns:
+      - name: nation_id
+        data_tests:
+          - unique
+          - not_null
+  - name: stg_regions 
+    columns:
+      - name: name 
+        data_tests: 
+          - accepted_values:
+              arguments: 
+                values: ['AFRICA', 'AMERICA', 'ASIA', 'EUROPE']
+              config: 
+                store_failures: true
+  - name: stg_orders
+    columns:
+      - name: total_price
+        data_tests:
+          - order_values:
+              arguments: 
+                val: 850
+              config:
+                store_failures: true
+
