@@ -39,3 +39,6 @@ models:
   my_new_project:
     staging:
       +materialized: table
+    intermediate:
+      +schema: intermediate
+      +materialized: table

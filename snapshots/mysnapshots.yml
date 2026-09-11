@@ -1,0 +1,8 @@
+snapshots:
+ - name: orders_snapshot
+   relation: ref('int_orders')
+   config:
+     unique_key: order_id
+     schema: dw_marts
+     strategy: timestamp
+     updated_at: order_date
