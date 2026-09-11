@@ -35,4 +35,3 @@ models:
               config:
                 store_failures: true
 
-
