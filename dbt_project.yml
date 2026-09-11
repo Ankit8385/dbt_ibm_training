@@ -42,3 +42,6 @@ models:
     intermediate:
       +schema: intermediate
       +materialized: table
+
+vars:
+  v_min_order: 850
