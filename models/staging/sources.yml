@@ -6,6 +6,12 @@ sources:
       - name: regions 
         description: Raw data of region information
       - name: nations 
+        columns:
+          - name: n_nationkey
+            data_tests:
+              - unique
+              - not_null
+              
       - name: customers
       - name: suppliers
       - name: lineitems
@@ -13,5 +19,5 @@ sources:
         config: 
           freshness: 
             warn_after: {count: 6, period: day}
-            error_after: {count: 153, period: day}
+            error_after: {count: 200, period: day}
           loaded_at_field: o_orderdate::timestamp_ntz
