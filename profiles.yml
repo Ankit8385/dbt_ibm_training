@@ -1,4 +1,4 @@
-my_new_project:
+default:
   outputs:
     dev:
       account: AWLFVMB-BCB57947
